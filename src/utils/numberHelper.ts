@@ -20,8 +20,8 @@ function int16ToBool(value?: number): boolean {
 
 function convertRSSIToRange(rssi: number): number {
   if (rssi >= -5) return 0;
-  const range = -100 - -50;
-  const valueInRange = rssi - -50;
+  const range = -100 - -61;
+  const valueInRange = rssi - -61;
   const percentage = valueInRange / range;
   const rangeSegment = Math.ceil(percentage * 4);
   const result = 5 - rangeSegment;
