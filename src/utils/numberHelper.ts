@@ -20,12 +20,12 @@ function int16ToBool(value?: number): boolean {
 
 function convertRSSIToRange(rssi: number): number {
   if (rssi >= -5) return 0;
-  const range = -100 - -61;
-  const valueInRange = rssi - -61;
+  const range = -100 - -58;
+  const valueInRange = rssi - -58;
   const percentage = valueInRange / range;
-  const rangeSegment = Math.ceil(percentage * 4);
-  const result = 5 - rangeSegment;
-  return result <= 0 ? 0 : result >= 4 ? 4 : result;
+  const rangeSegment = Math.ceil(percentage * 3);
+  const result = 4 - rangeSegment;
+  return result <= 0 ? 0 : result >= 3 ? 3 : result;
 }
 
 export { formatInt16, int16ToBool, convertRSSIToRange };
