@@ -60,7 +60,7 @@ function parseData(message: string): ParsedValues {
 
     result.errors = alarmCoilsMap
       .map((coilIndex) => {
-        if (data.coil[coilIndex] === 1) return errorMessages[coilIndex];
+        if (data.coil && data.coil[coilIndex] === 1) return errorMessages[coilIndex];
         return "";
       })
       .filter(Boolean);

@@ -159,7 +159,7 @@ const defaultValues = {
     circulator: false,
     lighting: false,
   },
-  errors: [] as string[],
+  errors: ["Conectando ao dispositivo remoto..."] as string[],
 };
 
 type ParsedValues = typeof defaultValues;
